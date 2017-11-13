@@ -1,0 +1,42 @@
+<?php
+
+
+include("conexao2.php");
+
+	$consulta = "SELECT * FROM usuarios";
+	$con = $mysqli->query($consulta) or die($mysqli->error);
+	$consulta2 = "SELECT * FROM msg_amigos";
+	$con2 = $mysqli->query($consulta2) or die($mysqli->error);
+	$consulta3 = "SELECT * FROM msg_amigos";
+	$con3 = $mysqli->query($consulta3) or die($mysqli->error);
+	$consulta4 = "SELECT * FROM msg_amigos";
+	$con4 = $mysqli->query($consulta4) or die($mysqli->error);
+	$consulta5 = "SELECT * FROM msg_amigos";
+	$con5 = $mysqli->query($consulta5) or die($mysqli->error);
+	$consulta6 = "SELECT * FROM msg_amigos";
+	$con6 = $mysqli->query($consulta6) or die($mysqli->error);
+	$consulta7 = "SELECT * FROM msg_amigos";
+	$con7 = $mysqli->query($consulta7) or die($mysqli->error);
+
+
+
+?>
+
+
+
+
+<html>
+<head>
+</head>
+<body>
+
+<?php while ($dado = $con->fetch_array()) { ?>
+		
+
+		<button id="botaop"><?php echo $dado["equipe"]; ?></button>
+
+
+		<?php } ?>
+
+</body>
+</html>
